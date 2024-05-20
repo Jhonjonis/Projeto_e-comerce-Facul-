@@ -4,6 +4,23 @@ h1 {
 
   }
 
+
+  .banner {
+    /* Estilos existentes */
+    width: 1500px; /* Define a largura do banner */
+    height: 300px; /* Define a altura do banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do banner */
+}
+
+
+.banner img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do contêiner */
+    object-fit: cover; /* Ajusta a imagem para preencher completamente o espaço */
+}
   
 /* Estilo para o menu primário */
 .navbar {
@@ -19,7 +36,10 @@ h1 {
 .navbar-nav .nav-item {
     margin-left: 10px;
 }
-
+.icon-wrapper {
+  background-color: #007bff; /* Cor de fundo desejada */
+  
+}
 .navbar-nav .nav-link {
     color: #000;
     text-decoration: none;
@@ -28,6 +48,11 @@ h1 {
     padding: 2px;
 }
 
+.icon img {
+  width: 50px; /* Largura do ícone */
+  height: auto; /* Altura ajustável para manter a proporção */
+ 
+}
 .navbar-nav .nav-link:hover {
     color: #007bff;
 }
@@ -80,6 +105,12 @@ h1 {
     z-index: 1;
 }
 
+.header .cart {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
 .login-popup-content a {
     display: block;
     padding: 5px 10px;
