@@ -1,259 +1,853 @@
-h1 {
-    font-family: Helvetica, Arial, sans-serif;
-  
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+body {
+    background-color: #cdcdcd;
+}
+
+
+/* Começo nav bar*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 
 /* Espaço entre itens da barra de navegação em telas maiores */
 @media (min-width: 992px) {
     .navbar-nav>li:not(:last-child) {
         margin-right: 20px;
-  }
+    }
 
 }
 
+.btn-outline-success:hover {
+    background-color: #d5cdcd;
+    /* Nova cor de fundo quando o mouse está sobre o botão */
 
-.banner img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
-    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do contêiner */
-    object-fit: cover; /* Ajusta a imagem para preencher completamente o espaço */
-}
-  
-/* Estilo para o menu primário */
-.navbar {
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    background-color: #007bff; /* Cor de fundo do menu */
-    padding: 10px; /* Espaçamento interno para melhorar a aparência */
+    color: #fff;
+    /* Nova cor do texto quando o mouse está sobre o botão */
 }
 
-.navbar-nav {
-    margin-right: auto;
+.input-group input[type="search"] {
+    /* Define a largura como 300 pixels */
+    /* Define o tamanho da barra de pesquisa */
+    padding: 0.5rem 2rem;
+    /* Você pode ajustar os valores conforme necessário */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    /* Adicione outros estilos conforme necessário */
+    
+    
+
 }
 
-.navbar-nav .nav-item {
-    margin-left: 10px;
+.btn-outline-success {
+    font-family: Arial, sans-serif;
+    /* Define a fonte para o botão */
+    font-size: 16px;
+    /* Define o tamanho do texto no botão */
 }
-  
+
+.navbar-logo {
+    height: 60px;
+    /* Ajuste a altura conforme necessário */
+    width: auto;
+    /* Para manter a proporção da imagem */
+    font-size: 20xp;
+
 }
+
+.navbar .navbar-brand.navbar-title {
+    font-size: 40px !important;
+}
+
+.navbar-brand,
 .navbar-nav .nav-link {
+    font-size: 20px;
+    /* Define o tamanho da fonte para a marca e os links do menu */
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    /* Define a cor do texto */
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff;
+    /* Define a cor do texto para o link ativo */
+
+}
+/*Fim nav bar*/
+
+#cart-icon {
+    color: #ffffff;
+    /* Cor do ícone */
+    font-size: 24px;
+    /* Tamanho do ícone */
+
+}
+
+/* Estilos padrão para o banner */
+.banner {
+    z-index: -1; /* Coloca o banner por trás do menu */
+    width: 100%;
+    /* Largura total */
+    height: 400px;
+    /* Altura fixa */
+    background-image: url('../img/2\ \(1\).png');
+
+    /* Imagem de fundo */
+    background-repeat: no-repeat;
+    /* Repetição de imagem desabilitada */
+    background-size: cover;
+    /* Redimensiona a imagem para cobrir todo o espaço */
+    background-position: center;
+    /* Centraliza a imagem */
+    text-align: center;
+    /* Alinha o texto ao centro */
+    position: relative;
+    /* Definindo o posicionamento relativo */
+}
+
+
+
+/* Estilos para o título no banner */
+.banner h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Define a família da fonte */
+    color: #ddd;
+    /* Cor do texto */
+    position: absolute;
+    /* Posiciona absolutamente */
+    top: 30%;
+    /* Define a distância do topo */
+    left: 30%;
+    /* Define a distância da esquerda */
+    transform: translate(-50%, -50%);
+    /* Translação para ajustar o posicionamento */
+
+}
+
+.botao {
+    width: 200px;
+    /* Largura fixa */
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    text-decoration: none;
+    /* Remove a decoração do texto */
+    font-size: 16px;
+    /* Tamanho do texto */
+    cursor: pointer;
+    /* Cursor ao passar o mouse */
+    display: inline-block;
+    /* Exibe como bloco */
+    margin-top: 350px;
+    /* Espaçamento superior */
+    transition-duration: 0.4s;
+    /* Duração da transição */
+    background-color: #1344d7;
+    /* Cor de fundo do menu de navegação */
+    color: #ccc;
+    /* Cor do texto */
+    font-weight: bold;
+    /* Peso da fonte */
+    border: none;
+    /* Remove a borda */
+    border-radius: 15px;
+    /* Borda arredondada */
+}
+
+.menu-item-content .fa-star {
+    color: #ffd900; /* Cor amarela para o ícone de estrela */
+}
+
+.menu-item-content .fa-instagram {
+    color: #ff0000;
+}
+
+.menu-item-content .fa-tags {
+    color: #FF4500; /* Cor laranja para o ícone de tags */
+}
+
+.menu-item-content .fa-ticket-alt {
+    color: #fff700; /* Cor azul para o ícone de ticket */
+}
+/* Estilos do mini menu */
+.mini-menu {
+    background-color: #cdcdcd;
+    padding: 4px 10px; /* Reduz o padding do container */
+    width: auto; /* Define a largura para se ajustar ao conteúdo */
+    top: 10px; /* Posição abaixo do banner */
+    text-align: center;
+    display: flex; /* Torna os itens do menu flexíveis */
+    justify-content: center; /* Alinha os itens do menu ao centro horizontalmente */
+    z-index: 1; /* Coloca o menu à frente do banner */
+    justify-content: space-around;
+    margin-bottom: -40px;
+}
+
+.menu-item {
     color: #000;
+    margin: 0 10px; /* Adiciona margem horizontal aos itens do menu */
+    font-size: 16px;
     text-decoration: none;
-    transition: color 0.7s ease;
-    font-size: 15px;
-    padding: 2px;
+    display: flex; /* Torna os itens do menu flexíveis */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
 }
 
-.icon img {
-  width: 50px; /* Largura do ícone */
-  height: auto; /* Altura ajustável para manter a proporção */
- 
-}
-.navbar-nav .nav-link:hover {
-    color: #007bff;
+.menu-item-content {
+    width: 90px; /* Ajusta o tamanho da imagem conforme necessário */
+    height: 90px;
+    border: 60px solid #cdcdc; /* Adiciona uma borda preta */
+    border-radius: 50%; /* Torna a borda circular */
+    display: flex;
+    flex-direction: column; /* Altera a direção do conteúdo para coluna */
+    align-items: center;
+    background-color: #1344d7;
+    margin-bottom: 70px; /* Adiciona espaço entre a imagem e o texto */
 }
 
-/* Estilo para o menu de login/cadastro */
-.login-popup {
+.menu-item i {
+    color: #f9f9f9; /* Define a cor do ícone */
+    font-size: 40px; /* Ajusta o tamanho do ícone conforme necessário */
+    padding: 10px; /* Adiciona preenchimento ao redor do ícone */
+    margin-bottom: 10px; /* Adiciona espaço entre o ícone e o texto */
+    line-height: 60px; /* Define a linha central do ícone igual à altura do contêiner */
+}
+
+
+.menu-item-text {
+    margin-top: 5px; /* Espaçamento superior para separar o texto da imagem */
+    color: #fff; /* Define a cor do ícone */
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+
+
+.carousel-item .row img {
+    height: 600px;
+    /* Defina a altura desejada */
+    object-fit: cover;
+    /* Para manter a proporção da imagem */
+}
+
+
+
+/* Media query para telas pequenas e médias */
+@media only screen and (max-width: 768px) {
+    .banner {
+        height: 300px; /* Reduz a altura do banner */
+    }
+
+    .banner h1 {
+        font-size: 15px; /* Reduz o tamanho da fonte do título */
+        top: 20%; /* Reposiciona o título */
+        left: 40%;
+    }
+
+    .product {
+        width: calc(33.33% - 20px);
+    }
+
+    .menu-item {
+        margin: 0 5px;
+        text-align: center;
+    }
+.menu-item-content{
+    border-radius: 60%;
+    width: 50px; /* Ajusta o tamanho da imagem conforme necessário */
+    height: 50px;
+}
+    .menu-item i {
+        color: #f9f9f9; /* Define a cor do ícone */
+    font-size: 30px; /* Ajusta o tamanho do ícone conforme necessário */
+    padding: 20px; /* Adiciona preenchimento ao redor do ícone */
+    margin-bottom: 8px; /* Adiciona espaço entre o ícone e o texto */
+    line-height: 10px; /* Define a linha central do ícone igual à altura do contêiner */
+    }
+
+    .menu-item-text {
+        font-size: 12px;
+        margin-top: 5px; /* Adiciona espaço entre o ícone e o texto */
+    }
+    .container {
+        max-width: 960px;
+    }
+
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+    .container-imagens {
+        display: none; /* Oculta o container de imagens em telas menores */
+    }
+
+    /* Exibe o carrossel em telas menores */
+    #carouselExampleIndicators {
+        display: block;
+    }
+    .container-imagens {
+        display: none;
+        align-items: center; /* Alinha verticalmente ao centro */
+        justify-content: center; /* Alinha horizontalmente ao centro */
+        height: 300px; /* Defina uma altura para o container */
+    }
+    
+    .imagem {
+        
+        display: flex;
+        align-items: center; /* Alinha verticalmente ao centro */
+        justify-content: center; /* Alinha horizontalmente ao centro */
+    }
+    
+    /* Limpar margem da última imagem */
+    .imagem:last-child {
+        margin-right: 0;
+    }
+    #carouselExampleControlsLeft {
+        display: none; /* Oculta o carrossel em telas menores */
+    }
+}
+.container-imagens {
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    height: 250px; /* Defina uma altura para o container */
+}
+
+.imagem {
+    flex: 1; /* Faz com que as imagens ocupem todo o espaço disponível */
+    height: 100%; /* Ajusta a altura para cobrir todo o espaço */
+    
+    margin-right: 8%; /* Espaçamento entre as imagens */
+    object-fit: contain; /* Redimensiona a imagem para caber dentro do contêiner mantendo a proporção */
+}
+
+/* Limpar margem da última imagem */
+.imagem:last-child {
+    margin-right: 0;
+}
+
+.botao {
+    width: 150px;
+    /* Reduz a largura do botão */
+    font-size: 14px;
+    /* Reduz o tamanho da fonte do botão */
+    margin-top: 350px;
+    /* Reposiciona o botão */
+}
+
+.input-group input[type="search"] {
+    width: 200px;
+    /* Reduz a largura da barra de pesquisa para telas menores */
+    font-size: 14px;
+    /* Reduz o tamanho do texto na barra de pesquisa para telas menores */
+}
+
+.btn-outline-success {
+    font-size: 14px;
+    /* Reduz o tamanho do texto no botão para telas menores */
+}
+@media screen and (max-width: 992px) {
+    .container-imagens {
+        height: auto; /* Ajusta a altura automaticamente */
+        flex-wrap: wrap; /* Permite que as imagens sejam distribuídas em várias linhas */
+    }
+
+    .imagem {
+        width: calc(33.33% - 20px); /* Define a largura das imagens */
+        height: auto; /* Mantém a altura automática para manter a proporção */
+        margin: 10px; /* Adiciona um espaçamento entre as imagens */
+    }
+     .image-container {
+        display: none; /* Oculta o contêiner da imagem */
+    }
+    .container {
+        display: none; /* Oculta o contêiner de contagem regressiva */
+    }
+}
+
+
+
+/* Estilos responsivos para telas menores que 1024px */
+@media screen and (max-width: 1024px) {
+    input[type="search"] {
+        width: 250px;
+        /* Reduz ainda mais a largura da barra de pesquisa para telas menores que 1024px */
+        font-size: 14px;
+        /* Pode ajustar o tamanho do texto conforme necessário */
+    }
+
+
+    .btn-outline-success {
+        font-size: 14px;
+        /* Pode ajustar o tamanho do texto do botão conforme necessário */
+    }
+    #carouselExampleControlsLeft {
+        display: none; /* Oculta o carrossel em telas menores */
+    }
+   
+}
+
+
+/* styles.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
     position: relative;
 }
 
-.login-popup-content {
-    position: absolute;
-    top: 30px;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 150px;
-    border: 1px solid #ccc;
-    border-radius: 5px; /* Adiciona bordas arredondadas */
-    display: none;
-    z-index: 1;
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: center;
 }
 
-.login-popup-content a {
-    display: block;
-    padding: 5px 10px;
-    color: #333;
-    text-decoration: none;
-}
-
-.login-popup-content a:hover {
-    background-color: #ddd;
-}
-
-.login-popup:hover .login-popup-content {
-    display: block;
-}
-/* Estilo para o menu de login/cadastro */
-.login-popup {
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: calc(16.666% - 20px);
+    box-sizing: border-box;
+    overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.login-popup-content {
-    position: absolute;
-    top: 30px;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 150px;
-    border: 1px solid #ccc;
-    border-radius: 5px; /* Adiciona bordas arredondadas */
-    display: none;
-    z-index: 1;
-}
-
-.header .cart {
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-.login-popup-content a {
+.product img {
+    max-width: 60%;
+    height: auto;
     display: block;
-    padding: 5px 10px;
-    color: #333;
-    text-decoration: none;
+    margin: auto;
 }
 
-.login-popup-content a:hover {
-    background-color: #ddd;
+.product-text {
+    padding: 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+
 }
 
-.login-popup:hover .login-popup-content {
-    display: block;
+
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+    .container-imagens {
+        display: none; /* Oculta o container de imagens em telas menores */
+    }
+
+    /* Exibe o carrossel em telas menores */
+    #carouselExampleIndicators {
+        display: block;
+    }
+    .container-imagens {
+        display: none;
+        align-items: center; /* Alinha verticalmente ao centro */
+        justify-content: center; /* Alinha horizontalmente ao centro */
+        height: 300px; /* Defina uma altura para o container */
+    }
+    
+    .imagem {
+        
+        display: flex;
+        align-items: center; /* Alinha verticalmente ao centro */
+        justify-content: center; /* Alinha horizontalmente ao centro */
+    }
+    
+    /* Limpar margem da última imagem */
+    .imagem:last-child {
+        margin-right: 0;
+    }
+    #carouselExampleControlsLeft {
+        display: none; /* Oculta o carrossel em telas menores */
+    }
+    #carousel2,
+    #carousel3 {
+        display: none;
+    }
+    
+    .text-overlay1, .text-overlay1{
+        display: none;
+    }
+    .image-container {
+        display: none; /* Oculta o contêiner da imagem */
+    }
+    .container {
+        display: none; /* Oculta o contêiner de contagem regressiva */
+    }
+    .botao {
+        width: 150px;
+        /* Reduz a largura do botão */
+        font-size: 14px;
+        /* Reduz o tamanho da fonte do botão */
+        margin-top: 250px;
+        /* Reposiciona o botão */
+    }
+    
+}
+
+
+/* Estilos para telas maiores que 992px */
+@media (min-width: 992px) {
+    .product {
+        width: calc(33.33% - 20px);
+        .image-container {
+            display: none; /* Oculta o contêiner da imagem */
+        }
+        .container {
+            display: none; /* Oculta o contêiner de contagem regressiva */
+        }
+        .image-container {
+            display: none; /* Oculta o contêiner da imagem */
+        }
+        .container {
+            display: none; /* Oculta o contêiner de contagem regressiva */
+        }
+    }
+    
+  
+}
+
+/* Estilos para telas maiores que 1200px */
+@media (min-width: 1200px) {
+    .product {
+        width: calc(20% - 10px);
+    }
+    
+}
+
+
+
+.carousel-inner {
+    padding: 1em;
+}
+
+
+@media (min-width: 768px) {
+    .card img {
+        height: 50%;
+    }
+    
+}
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --purple: hsl(240, 80%, 89%);
+  --pink: hsl(0, 59%, 94%);
+  --light-bg: hsl(204, 37%, 92%);
+  --light-gray-bg: hsl(0, 0%, 94%);
+  --white: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 7%);
+  --text-gray: hsl(0, 0%, 30%);
+}
+.card {
+    margin-bottom: 20px; /* Adicione margem inferior aos cartões */
+    background-color: #f8f9fa; /* Cor de fundo do cartão */
+    color: #343a40; /* Cor do texto */
+    margin-bottom: 20px; /* Margem inferior para espaçamento entre cartões */
+    border: 1px solid #000000; /* Borda do cartão */
+    border-radius: 20px; /* Borda arredondada */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra do cartão */
+    flex: 1; /* Faz com que os cards ocupem todo o espaço disponível horizontalmente */
+    justify-content: center; /* Alinha horizontalmente ao centro */
+     font-family: 'Roboto', sans-serif;
+
+  }
+  
+
+
+
+.banner22 {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Para centralizar verticalmente */
+    border-radius: 15px; /* Adicionando bordas arredondadas */
+    overflow: hidden; /* Para garantir que as bordas arredondadas sejam aplicadas corretamente */
+}
+
+.banner22 img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.container1 {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+.image-container {
+    margin-right: 20px; /* Espaçamento à direita */
+    margin-bottom: 20px; /* Adiciona 20 pixels de espaço abaixo da imagem */
 }
     
 
 
+.text-countdown-container {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+}
+.container {
+    background-color: #F5F5F5; /* Define a cor de fundo */
+    padding: 31px; /* Adiciona espaçamento interno */
+    text-align: center; /* Alinha o conteúdo ao centro */
+    margin-left: -35px; /* Ajusta a margem esquerda para 10px */
+    margin-top: -19px; /* Move os elementos para cima em relação à margem padrão */
+}
+
+.countdown-text p {
+    color: #FD305C;
+    
+    font-size: 20px; /* Define o tamanho da fonte */
+}
+#countdown {
+    font-size: 40px; /* Define o tamanho da fonte para a contagem regressiva */
+}
+
+
+.image-container img {
+    width: 1200px; /* Define a largura da imagem como 500 pixels */
+}
 
 
 
+.text-overlay {
+    position: relative;
+    width: 100%;
+    margin-top: 20px; /* Adiciona espaço entre o carrossel e o texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel-item img {
+    max-height: 500px;
+    /* Define a altura máxima das imagens como 200 pixels */
+    width: auto;
+    /* Mantém a largura proporcional à altura */
+}
+@keyframes blink {
+    0% { color: #000; } /* Cor inicial */
+    50% { color: #ff0000; } /* Cor intermediária */
+    100% { color: #000; } /* Cor final */
+}
+@keyframes background-blink2 {
+    0% { background-color: #ff0000; }
+    50% { background-color: #f0f0f0; }
+    100% { background-color: #ff0000; }
+}
+.text-overlay1, .text-overlay2{
+    text-align: center;
+    color: #000;
+    border: 1px solid black; /* Define uma borda sólida preta */
+    padding: 3px; /* Adiciona um espaçamento interno para a borda */
+    background-color: #d4d4d4; /* Cor de fundo */
+    animation:  background-blink2 1s infinite; /* Define a animação de cor de fundo piscando */
+}
 
-body {
-    font-family: Arial, sans-serif;
+
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+
+}
+
+* {
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  .header {
-    background-color: #6c808af9;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .menu {
-    background-color: #fffffff7;
-    color: #000000;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu ul li {
-    display: inline;
-    margin: 0 10px;
-  }
-  
-  .menu ul li a {
-    color: #0641d6;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+main {
+    height: 80vh;
+}
+
+footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+}
+
+.footer-link {
     text-decoration: none;
-  }
-  
-  .banner {
-    background-image: url('https://via.placeholder.com/1500x300');
-    background-size: cover;
-    height: 300px;
-    text-align: center;
-    color: #fff;
+}
+
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+} 
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;    
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #7f37c9;
+}
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_subscribe p {
+    color: var(--color-neutral-30);
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+}
+
+#input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group button {
+    background-color: #7f37c9;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input_group button:hover {
+    opacity: 0.8;
+}
+
+#footer_copyright {
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-  
-  .product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  
-  .product {
-    width: 300px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  .product img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .product-info {
-    padding: 10px;
-  }
-  
-  button {
-    background-color: #1849dc;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #ed362b;
-  }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+#footer_contacts h1 {
+    /* Estilos para o título */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    color: #ffffff; /* Cor do texto */
+    /* Adicione outros estilos conforme necessário */
+}
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
 }
 
-.header {
-    background-color: #1344d7;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header h1 {
-    margin: 0;
-}
-
-.header form {
-    display: flex;
-    align-items: center;
-}
-
-.header form label {
-    color: #fff;
-    margin-right: 10px;
-}
-
-.header form input[type="text"] {
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-}
-
-.header form input[type="submit"] {
-    background-color: #ff6f61;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.header form input[type="submit"]:hover {
-    background-color: #ed362b;
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
 }

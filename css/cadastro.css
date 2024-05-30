@@ -1,0 +1,67 @@
+/* Começo nav bar*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+/* Espaço entre itens da barra de navegação em telas maiores */
+@media (min-width: 992px) {
+    .navbar-nav>li:not(:last-child) {
+        margin-right: 20px;
+    }
+
+}
+
+.btn-outline-success:hover {
+    background-color: #d5cdcd;
+    /* Nova cor de fundo quando o mouse está sobre o botão */
+
+    color: #fff;
+    /* Nova cor do texto quando o mouse está sobre o botão */
+}
+
+.input-group input[type="search"] {
+    /* Define a largura como 300 pixels */
+    /* Define o tamanho da barra de pesquisa */
+    padding: 0.5rem 2rem;
+    /* Você pode ajustar os valores conforme necessário */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    /* Adicione outros estilos conforme necessário */
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.btn-outline-success {
+    font-family: Arial, sans-serif;
+    /* Define a fonte para o botão */
+    font-size: 16px;
+    /* Define o tamanho do texto no botão */
+}
+
+.navbar-logo {
+    height: 60px;
+    /* Ajuste a altura conforme necessário */
+    width: auto;
+    /* Para manter a proporção da imagem */
+    font-size: 20xp;
+
+}
+
+.navbar .navbar-brand.navbar-title {
+    font-size: 40px !important;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    font-size: 20px;
+    /* Define o tamanho da fonte para a marca e os links do menu */
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    /* Define a cor do texto */
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff;
+    /* Define a cor do texto para o link ativo */
+
+}
+/*Fim nav bar*/
