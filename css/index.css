@@ -2,17 +2,12 @@ h1 {
     font-family: Helvetica, Arial, sans-serif;
   
 
+/* Espaço entre itens da barra de navegação em telas maiores */
+@media (min-width: 992px) {
+    .navbar-nav>li:not(:last-child) {
+        margin-right: 20px;
   }
 
-
-  .banner {
-    /* Estilos existentes */
-    width: 1500px; /* Define a largura do banner */
-    height: 300px; /* Define a altura do banner */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do banner */
 }
 
 
@@ -36,8 +31,6 @@ h1 {
 .navbar-nav .nav-item {
     margin-left: 10px;
 }
-.icon-wrapper {
-  background-color: #007bff; /* Cor de fundo desejada */
   
 }
 .navbar-nav .nav-link {
