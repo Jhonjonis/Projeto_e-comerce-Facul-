@@ -2,109 +2,242 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device=width, initial-scale=1.0">
-  <title>formulário</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto D&J INFO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/cadastro.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js" defer></script>
-    <script src="https://kit.fontawesome.com/eec536990a.js" crossorigin="anonymous"></script>
-    <link rel="css/cadastro.css">
-  <style>
-    * {
-      font-family: Arial Narrow, Helvetica, sans-serif
-    }
-  </style>
-
-
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    
+    <style>
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
-        <!-- Inicio Nav Bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1344d7;">
-            <div class="container-fluid">
-                <a class="navbar-brand navbar-title" href="index.html">
-                    <img src="img/WhatsApp-Image-2024-05-19-at-15.29.04.ico"
-                        alt="Sua Logo" style="height: 70px; width: 70px; ">
-                    D&J INFO
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <!-- Inicio Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1344d7;">
+        <div class="container-fluid">
+            <a class="navbar-brand navbar-title" href="index.html">
+                <img src="img/logo.ico" alt="Sua Logo" style="height: 70px; width: 70px; ">
+                D&J INFO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-user"></i> Login/cadastro
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="cadastro.html">Cadastre-se</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Fale conosco</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nossas ofertas</a>
+                    </li>
+            
+                    
+                </form>
+                <div class="ms-lg-auto d-none d-lg-block">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa-solid fa-user"></i> Login/cadastro
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-shopping-cart" id="cart-icon"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="login.html">Login</a></li>
-                                <li><a class="dropdown-item" href="html/cadastro.html">Cadastre-se</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Fale conosco</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Nossas ofertas</a>
                         </li>
                     </ul>
-                    <form class="d-flex flex-wrap">
-                        <div class="input-group">
-                            <input class="form-control form-control-lg me-2 mb-2 mb-lg-0 text-start" type="search"
-                                placeholder="Faça sua busca" aria-label="Search">
-                            <button class="btn btn-outline-success btn-sm border-0" type="submit">
-                                <i class="fas fa-search text-white"></i>
-                            </button>
-                        </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Final Nav Bar -->
+     <!-- Container para a barra de informações -->
+     <div class="info-bar">
+        <h2 class="report">Reportar um problema</h2>
+        <p><button id="button1">📱 Roubo ou perda de celular </button></p>
+        <p><button id="button2">🔐 Roubo de conta </button></p>
+    </div>
+     
+     <div class="form-box">
+        <h2>Criar Conta</h2>
+        <p>Já é um membro? <a href="#">Login</a></p>
+        <form action="#">
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
+            </div>
     
-                    </form>
-                    <div class="ms-lg-auto d-none d-lg-block">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fas fa-shopping-cart" id="cart-icon"></i>
-                                </a>
-                            </li>
-                        </ul>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Digite o seu email" required>
+            </div>
+    
+            <div class="input-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" placeholder="Digite o seu telefone" required>
+            </div>
+    
+            <div class="input-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" placeholder="Digite o seu endereço" required>
+            </div>
+    
+            <div class="input-group">
+                <label for="numeroCasa">Número da Casa</label>
+                <input type="text" id="numeroCasa" placeholder="Digite o número da casa" required>
+            </div>
+    
+            <div class="input-group">
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input type="date" id="dataNascimento" required>
+            </div>
+    
+            <div class="input-group">
+                <label for="sexo">Sexo</label>
+                <select id="sexo" required>
+                    <option value="" disabled selected>Selecione o sexo</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+    
+            <div class="input-group w50">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
+            </div>
+    
+            <div class="input-group w50">
+                <label for="Confirmarsenha">Confirmar Senha</label>
+                <input type="password" id="Confirmarsenha" placeholder="Confirme a senha" required>
+            </div>
+    
+            <div class="input-group">
+                <button>Cadastrar</button>
+            </div>
+        </form>
+
+     </div>
+
+
+
+    
+        
+        <!--    Scripts                          scripts                         -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://kit.fontawesome.com/eec536990a.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/style.js" ></script>
+
+        <!--    Scripts                          scripts                         -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+         <footer>
+            <div id="footer_content">
+                <div id="footer_contacts">
+                    <h1><img src="img/Untitled design (12).png" alt="Sua Logo" width="60" height="60"></h1>
+                    <h1>D&J INFO</h1>
+
+                    <div id="footer_social_media">
+                        <a href="#" class="footer-link" id="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" class="footer-link" id="facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" class="footer-link" id="whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <h3>Blog</h3>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Tech</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Adventures</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Music</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <h3>Desenvolvido por:</h3>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Jonis Vitor F.Silva</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/jonis-vitor-582bbb293/" class="footer-link">Linkedlin</a>
+                    </li>
+                    <li>
+                        <li>
+                            <a href="https://github.com/Jhonjonis" class="footer-link">GiftHub</a>
+                        </li>
+                </ul>
+
+                <div id="footer_subscribe">
+                    <h3>Se iscreva!!!</h3>
+
+                    <p>
+                        Deixe seu email e se inscreva para fica por dentro de todas as nossas novidades!!
+                    </p>
+
+                    <div id="input_group">
+                        <input type="email" id="email">
+                        <button>
+                            <i class="fa-regular fa-envelope"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-        </nav>
-        <!-- Final Nav Bar -->
-  <h1>Não possui conta? Cadastra-se agora</h1>
-  <form>
-    <p>nome <input type="text" name="nome" id="nome"></p>
-    <p>Sobrenome:<input type="text" name="sobrenome" id="sobrenome"></p>
-    <p>Endereço:<input type="text" name="endereço" id="endereço"></p>
-    <p>N°Casa:<input type="N°casa" name="N°Casa" id="N°Casa" </p>
-    <p>complemento: <input type="text" name="complemento" id="complemento"></p>
-    <p>e-mail: <input type="text" name="text" id="text"></p>
-    <p>CPF: <input type="number" numer="" id="number"></p>
-    <p>Data de nascimento: <input type="date" name="date" id="date"></p>
-    <p>Genêro: <input type="radio" name="masculino" id="masculino">Masculino
-    <input type= "radio" name="feminino id="feminino">Feminino
-     <br>
-      <label for="senhaUsuario">Senha: </label>
-    <input id="senhaUsuario" type="password" required />
-    <input type="submit" value="Enviar" <br/>
-  </form>
 
-</body>
+            <div id="footer_copyright">
+                &#169
+                2023 Todos os Direitos reservados.
+            </div>
+        </footer>
+
+
+    </body>
 
 </html>

@@ -14,7 +14,7 @@
 
 
 // Define a data de término da contagem regressiva
-   const endDate = new Date('2024-05-29 18:00:00').getTime();
+   const endDate = new Date('2024-06-01 20:00:00').getTime();
             
    // Atualiza a contagem regressiva a cada segundo
    const timer = setInterval(function() {

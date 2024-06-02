@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -7,7 +6,7 @@
     <title>Projeto D&J INFO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/produtos.css">
+    <link rel="stylesheet" href="css/produtos.css">
     <style>
         .carousel-item img {
             width: 100%;
@@ -17,12 +16,12 @@
 </head>
 
 <body>
-    <?php include 'produto.php'; ?>
+  
 
     <!-- Inicio Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1344d7;">
         <div class="container-fluid">
-            <a class="navbar-brand navbar-title" href="#">
+            <a class="navbar-brand navbar-title" href="index.html">
                 <img src="img/logo.ico" alt="Sua Logo" style="height: 70px; width: 70px;">
                 D&J INFO
             </a>
@@ -79,10 +78,9 @@
         </div>
     </nav>
     <!-- Final Nav Bar -->
-
     <div class="container">
-        <h1>Detalhes do Produto</h1>
-        <div class="full-width-line"></div> <!-- Linha acima de "Detalhes do Produto" -->
+     
+       
         <div class="row">
             <div class="col-md-6">
                 <!-- Lado Esquerdo - Imagens do Produto -->
@@ -91,87 +89,108 @@
                     <!-- Adicione mais imagens conforme necessário -->
                 </div>
             </div>
-            
+    
             <div class="col-md-6">
                 <!-- Lado Direito - Informações do Produto -->
-                <div class="product-info">
-                    <h2 id="produtoTitulo">SSD 128gb</h2>
-                    <p id="produtoDescricao">SSD 128 gb golfenfir.</p>
-                    <p id="produtoPreco">R$ 87,99</p>
-                    <p>Disponibilidade: Em estoque</p>
-                    <label for="quantity">Quantidade:</label>
-                    <input type="number" id="quantity" name="quantity" value="1" min="1">
-                    <button class="btn btn-primary">Adicionar ao Carrinho</button>
+              <div class="product-info">
+    <h2 id="produtoTitulo">SSD 128gb</h2>
+    <p id="produtoDescricao">SSD 128 gb golfenfir.</p>
+    <p id="produtoPreco">R$ 87,99</p>
+
+    <button class="btn btn-primary" onclick="adicionarAoCarrinho()">Comprar</button>
+    <script>
+        // Função para adicionar um produto ao carrinho
+        function adicionarAoCarrinho() {
+            // Obter os detalhes do produto
+            const nome = obterParametro('nome');
+            const descricao = obterParametro('descricao');
+            const preco = obterParametro('preco');
+    
+            // Redirecionar para a página do carrinho, passando os detalhes do produto como parâmetros da URL
+            window.location.href = 'carrinho.html?nome=' + encodeURIComponent(nome) + '&descricao=' + encodeURIComponent(descricao) + '&preco=' + encodeURIComponent(preco);
+        }
+    </script>
+    
+
+    <label class="quantity-label">Quantidade:</label>
+    <input type="number" id="quantity" name="quantity" value="1" min="1">
+
+</div>
+    
+                <!-- Informações de Frete -->
+                <form id="shipping-form">
+                    <label for="cep">CEP de Destino:</label>
+                    <input type="text" id="cep" name="cep" required>
+                    <input type="hidden" id="frete" name="frete">
+                    <button type="submit" class="calculate-shipping-btn">Calcular</button>
+                </form>
+                <p id="resultado-frete"></p>
                 </div>
                 
-                <!-- Informações de Frete -->
-                <div class="shipping-info">
-                    <h2>Calcular Frete</h2>
-                    <form id="shipping-form">
-                        <label for="cep">CEP:</label>
-                        <input type="text" id="cep" name="cep" required>
-                     
-                        <button type="submit" class="calculate-shipping-btn">Calcular</button>
+        </div>
+    
+      
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Aba "Faça sua pergunta" -->
+                <div id="comment-box">
+                    <h3>Faça sua pergunta</h3>
+                    <form id="comment-form">
+                        <label for="question">Pergunte ao vendedor:</label>
+                        <textarea id="question" name="question" rows="4" required></textarea>
+                        <button type="submit">Enviar</button>
                     </form>
+                    <div id="comments-section">
+                        <!-- Comentários serão exibidos aqui -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Seção "Deixe sua avaliação" -->
+                <div id="reviews-section">
+                    <div id="add-review">
+                       
+                        <form id="review-form">
+                            <h3>Deixe sua Avaliação</h3>
+                            <label for="reviewer-name">Seu Nome:</label>
+                            <input type="text" id="reviewer-name" name="reviewer-name" required>
+                            <label for="review-text">Sua Avaliação:</label>
+                            <textarea id="review-text" name="review-text" rows="4" required></textarea>
+                            <label for="review-rating">Sua Nota:</label>
+                            <div class="rating">
+                                <input type="radio" id="star5" name="review-rating" value="5"><label for="star5"></label>
+                                <input type="radio" id="star4" name="review-rating" value="4"><label for="star4"></label>
+                                <input type="radio" id="star3" name="review-rating" value="3"><label for="star3"></label>
+                                <input type="radio" id="star2" name="review-rating" value="2"><label for="star2"></label>
+                                <input type="radio" id="star1" name="review-rating" value="1"><label for="star1"></label>
+                            </div>
+                            <button type="submit">Enviar Avaliação</button>
+                            
+                            <!-- Conteúdo das avaliações -->
+                            <div class="review">
+                                <p><strong>João:</strong> Produto excelente, muito rápido!</p>
+                                <p>⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="review">
+                                <p><strong>Maria:</strong> Ótimo custo-benefício.</p>
+                                <p>⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="review">
+                                <p><strong>Pedro:</strong> Atendeu minhas expectativas.</p>
+                                <p>⭐⭐⭐⭐⭐</p>
+                            </div>
+                    </div>
                    
-                        <!-- Resultado do cálculo de frete será exibido aqui -->
+                    <div id="reviews">
+                        <!-- Avaliações serão exibidas aqui -->
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-        <div class="full-width-line"></div> <!-- Linha acima de "Detalhes do Produto" -->
-        <div id="comment-box">
-            <h3>Faça sua pergunta</h3>
-            <form id="comment-form">
-                <label for="question">Pergunte ao vendedor:</label>
-                <textarea id="question" name="question" rows="4" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-            <div id="comments-section">
-                <!-- Comentários serão exibidos aqui -->
-            </div>
-        </div>
-        <div id="reviews-section">
-           
-            <div id="add-review">
-                <h3>Deixe sua Avaliação</h3>
-                <form id="review-form">
-                    <label for="reviewer-name">Seu Nome:</label>
-                    <input type="text" id="reviewer-name" name="reviewer-name" required>
-                    <label for="review-text">Sua Avaliação:</label>
-                    <textarea id="review-text" name="review-text" rows="4" required></textarea>
-                    <label for="review-rating">Sua Nota:</label>
-                    <select id="review-rating" name="review-rating" required>
-                        <option value="5">⭐⭐⭐⭐⭐</option>
-                        <option value="4">⭐⭐⭐⭐</option>
-                        <option value="3">⭐⭐⭐</option>
-                        <option value="2">⭐⭐</option>
-                        <option value="1">⭐</option>
-                    </select>
-                    <button type="submit">Enviar Avaliação</button>
-                </form>
-            </div>
-            <h3>Avaliações e Comentários de Clientes</h3>
-            <div id="reviews">
-                <!-- Avaliações serão exibidas aqui -->
-                <div class="review">
-                    <p><strong>João:</strong> Produto excelente, muito rápido!</p>
-                    <p>⭐⭐⭐⭐⭐</p>
-                </div>
-                <div class="review">
-                    <p><strong>Maria:</strong> Ótimo custo-benefício.</p>
-                    <p>⭐⭐⭐⭐</p>
-                </div>
-                <div class="review">
-                    <p><strong>Pedro:</strong> Atendeu minhas expectativas.</p>
-                    <p>⭐⭐⭐⭐⭐</p>
-                </div>
-                <!-- Adicione mais avaliações conforme necessário -->
-            </div>
-        </div>
     </div>
     
+    </div>
+   
         
         <div class="row row-cols-1 row-cols-md-5 g-3 py-3">
             <div class="col">
@@ -265,7 +284,8 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/eec536990a.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="secundaria.js"></script>
+    <script type="text/javascript" src="js/secundaria.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -277,83 +297,79 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    <footer>
-        <div id="footer_content">
-            <div id="footer_contacts">
-                <h1><img src="img/logo.ico" alt="Sua Logo" width="60" height="60"></h1>
-                <h1>D&J INFO</h1>
+  <footer>
+    <div id="footer_content">
+        <div id="footer_contacts">
+            <h1><img src="img/Untitled design (12).png" alt="Sua Logo" width="60" height="60"></h1>
+            <h1>D&J INFO</h1>
 
-                <div id="footer_social_media">
-                    <a href="#" class="footer-link" id="instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+            <div id="footer_social_media">
+                <a href="#" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
 
-                    <a href="#" class="footer-link" id="facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
+                <a href="#" class="footer-link" id="facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
 
-                    <a href="#" class="footer-link" id="whatsapp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-
-            <ul class="footer-list">
-                <li>
-                    <h3>Blog</h3>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Tech</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Adventures</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Music</a>
-                </li>
-            </ul>
-
-            <ul class="footer-list">
-                <li>
-                    <h3>Desenvolvido por:</h3>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">......</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">......</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">.......</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">.......</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">.......</a>
-                </li>
-            </ul>
-
-            <div id="footer_subscribe">
-                <h3>Se inscreva!!!</h3>
-
-                <p>
-                    Deixe seu email e se inscreva para ficar por dentro de todas as nossas novidades!!
-                </p>
-
-                <div id="input_group">
-                    <input type="email" id="email">
-                    <button>
-                        <i class="fa-regular fa-envelope"></i>
-                    </button>
-                </div>
+                <a href="#" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
             </div>
         </div>
 
-        <div id="footer_copyright">
-            &#169 2023 Todos os Direitos reservados.
+        <ul class="footer-list">
+            <li>
+                <h3>Blog</h3>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Tech</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Adventures</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Music</a>
+            </li>
+        </ul>
+
+        <ul class="footer-list">
+            <li>
+                <h3>Desenvolvido por:</h3>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Jonis Vitor F.Silva</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/jonis-vitor-582bbb293/" class="footer-link">Linkedlin</a>
+            </li>
+            <li>
+                <li>
+                    <a href="https://github.com/Jhonjonis" class="footer-link">GiftHub</a>
+                </li>
+        </ul>
+
+        <div id="footer_subscribe">
+            <h3>Se iscreva!!!</h3>
+
+            <p>
+                Deixe seu email e se inscreva para fica por dentro de todas as nossas novidades!!
+            </p>
+
+            <div id="input_group">
+                <input type="email" id="email">
+                <button>
+                    <i class="fa-regular fa-envelope"></i>
+                </button>
+            </div>
         </div>
-    </footer>
+    </div>
+
+    <div id="footer_copyright">
+        &#169
+        2023 Todos os Direitos reservados.
+    </div>
+</footer>
 </body>
 
 </html>
