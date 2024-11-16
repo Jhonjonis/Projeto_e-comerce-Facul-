@@ -56,9 +56,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Nossas ofertas</a>
                     </li>
-            
-                    
-                </form>
+                </ul>
                 <div class="ms-lg-auto d-none d-lg-block">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -72,172 +70,121 @@
         </div>
     </nav>
     <!-- Final Nav Bar -->
-     <!-- Container para a barra de informações -->
-     <div class="info-bar">
+
+    <!-- Container para a barra de informações -->
+    <div class="info-bar">
         <h2 class="report">Reportar um problema</h2>
         <p><button id="button1">📱 Roubo ou perda de celular </button></p>
         <p><button id="button2">🔐 Roubo de conta </button></p>
     </div>
-     
-     <div class="form-box">
+    
+    <div class="form-box">
         <h2>Criar Conta</h2>
         <p>Já é um membro? <a href="#">Login</a></p>
-        <form action="#">
+        <form id="cadastroForm">
             <div class="input-group">
                 <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
+                <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo" required>
             </div>
-    
             <div class="input-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="Digite o seu email" required>
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Digite o seu CPF" required>
             </div>
-    
             <div class="input-group">
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" placeholder="Digite o seu telefone" required>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite o seu telefone" required>
             </div>
-    
             <div class="input-group">
                 <label for="endereco">Endereço</label>
-                <input type="text" id="endereco" placeholder="Digite o seu endereço" required>
+                <input type="text" id="endereco" name="endereco" placeholder="Digite o seu endereço" required>
             </div>
-    
             <div class="input-group">
                 <label for="numeroCasa">Número da Casa</label>
-                <input type="text" id="numeroCasa" placeholder="Digite o número da casa" required>
+                <input type="text" id="numeroCasa" name="numeroCasa" placeholder="Digite o número da casa" required>
             </div>
-    
             <div class="input-group">
                 <label for="dataNascimento">Data de Nascimento</label>
-                <input type="date" id="dataNascimento" required>
+                <input type="date" id="dataNascimento" name="dataNascimento" required>
             </div>
-    
             <div class="input-group">
                 <label for="sexo">Sexo</label>
-                <select id="sexo" required>
+                <select id="sexo" name="sexo" required>
                     <option value="" disabled selected>Selecione o sexo</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                    <option value="outro">Outro</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
                 </select>
             </div>
-    
             <div class="input-group w50">
                 <label for="senha">Senha</label>
-                <input type="password" id="senha" placeholder="Digite sua senha" required>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
             </div>
-    
             <div class="input-group w50">
                 <label for="Confirmarsenha">Confirmar Senha</label>
-                <input type="password" id="Confirmarsenha" placeholder="Confirme a senha" required>
+                <input type="password" id="Confirmarsenha" name="Confirmarsenha" placeholder="Confirme a senha" required>
             </div>
-    
             <div class="input-group">
-                <button>Cadastrar</button>
+                <button type="submit" onclick="event.preventDefault(); cadastrarUsuario()">Cadastrar</button>
             </div>
-        </form>
+        </form>     
+    </div>
 
-     </div>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/eec536990a.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/style.js" ></script>
 
-
-
-    
-        
-        <!--    Scripts                          scripts                         -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://kit.fontawesome.com/eec536990a.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="js/style.js" ></script>
-
-        <!--    Scripts                          scripts                         -->
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-            </div>
+    <!-- VLibras Widget -->
+    <div class="enabled">
+        <div class="vw-access-button active"></div>
+        <div class="vw-plugin-wrapper">
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
-         <footer>
-            <div id="footer_content">
-                <div id="footer_contacts">
-                    <h1><img src="img/Untitled design (12).png" alt="Sua Logo" width="60" height="60"></h1>
-                    <h1>D&J INFO</h1>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
-                    <div id="footer_social_media">
-                        <a href="#" class="footer-link" id="instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-
-                        <a href="#" class="footer-link" id="facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-
-                        <a href="#" class="footer-link" id="whatsapp">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <ul class="footer-list">
-                    <li>
-                        <h3>Blog</h3>
-                    </li>
-                    <li>
-                        <a href="#" class="footer-link">Tech</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer-link">Adventures</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer-link">Music</a>
-                    </li>
-                </ul>
-
-                <ul class="footer-list">
-                    <li>
-                        <h3>Desenvolvido por:</h3>
-                    </li>
-                    <li>
-                        <a href="#" class="footer-link">Jonis Vitor F.Silva</a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/jonis-vitor-582bbb293/" class="footer-link">Linkedlin</a>
-                    </li>
-                    <li>
-                        <li>
-                            <a href="https://github.com/Jhonjonis" class="footer-link">GiftHub</a>
-                        </li>
-                </ul>
-
-                <div id="footer_subscribe">
-                    <h3>Se iscreva!!!</h3>
-
-                    <p>
-                        Deixe seu email e se inscreva para fica por dentro de todas as nossas novidades!!
-                    </p>
-
-                    <div id="input_group">
-                        <input type="email" id="email">
-                        <button>
-                            <i class="fa-regular fa-envelope"></i>
-                        </button>
-                    </div>
+    <!-- Footer -->
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1><img src="img/Untitled design (12).png" alt="Sua Logo" width="60" height="60"></h1>
+                <h1>D&J INFO</h1>
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
 
-            <div id="footer_copyright">
-                &#169
-                2023 Todos os Direitos reservados.
-            </div>
-        </footer>
+            <ul class="footer-list">
+                <li><h3>Blog</h3></li>
+                <li><a href="#" class="footer-link">Tech</a></li>
+                <li><a href="#" class="footer-link">Adventures</a></li>
+                <li><a href="#" class="footer-link">Music</a></li>
+            </ul>
 
+            <ul class="footer-list">
+                <li><h3>Desenvolvido por:</h3></li>
+                <li><a href="#" class="footer-link">Jonis Vitor F.Silva</a></li>
+                <li><a href="https://www.linkedin.com/in/jonis-vitor-582bbb293/" class="footer-link">Linkedin</a></li>
+                <li><a href="https://github.com/Jhonjonis" class="footer-link">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
 
-    </body>
+</body>
 
 </html>
+

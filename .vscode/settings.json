@@ -1,4 +1,15 @@
 {
     "sqltools.useNodeRuntime": true,
-    "livePreview.defaultPreviewPath": "/index.html"
+    "livePreview.defaultPreviewPath": "/cadastro.html",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "SSL MODE",
+            "database": "DOCUMENTO",
+            "username": "postgres"
+        }
+    ]
 }

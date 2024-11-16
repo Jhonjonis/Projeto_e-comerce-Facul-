@@ -1,0 +1,7 @@
+[build]
+  functions = "netlify/functions"
+  publish = "public"  # ou outro diretório onde seus arquivos estáticos estão
+
+[dev]
+  command = "npm start"  # ou o comando correto para iniciar seu servidor local
+  targetPort = 3000  # a porta onde seu servidor está rodando
